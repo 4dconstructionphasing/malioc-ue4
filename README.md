@@ -28,7 +28,7 @@ https://www.unrealengine.com/ue4-on-github).
 Once you've got the engine checked out locally, navigate to the root folder, then, from your git shell, run:
 
 ```bash
-git submodule add -f https://github.com/ARM-software/malioc-ue4.git Engine/Plugins/Editor/MaliOC
+git submodule add -f https://github.com/ARM-software/malioc-ue4.git Engine/Plugins/MaliOfflineCompiler
 ```
 
 This will add the plugin as a [submodule](https://git-scm.com/book/en/v2/Git-Tools-Submodules) to Unreal Engine.
@@ -58,7 +58,7 @@ Close both.
 * Launch Unreal Engine again, select **MaliOCProject**, and click **Open**. A dialog will pop up asking you to rebuild
 missing modules. Click **Yes**.
 * The Unreal Editor will automatically open after the modules have been rebuilt. Close it again.
-* Go into the **MaliOCProject/Plugins/Editor/MaliOC** folder, and delete the following files and folders:
+* Go into the **MaliOCProject/Plugins/MaliOfflineCompiler** folder, and delete the following files and folders:
   * .git
   * Intermediate
   * Scripts

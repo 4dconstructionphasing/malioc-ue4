@@ -28,7 +28,7 @@ static const FName MaliOCTabID(TEXT("MaliOCTab"));
 
 const FString& GetMaliOCPluginFolderPath()
 {
-    static const FString path = FPaths::ConvertRelativePathToFull(FPaths::Combine(*FPaths::EnginePluginsDir(), TEXT("Editor/"), TEXT("MaliOC/")));
+    static const FString path = FPaths::ConvertRelativePathToFull(FPaths::Combine(*FPaths::EnginePluginsDir(), TEXT("MaliOfflineCompiler/")));
     return path;
 }
 
