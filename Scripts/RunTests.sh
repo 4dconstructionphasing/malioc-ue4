@@ -17,9 +17,9 @@ echo "Running exhaustive Mali Offline Compiler plugin for Unreal Engine 4 tests.
 
 if [ "$(uname)" = "Darwin" ];
 then
-    UE4Editor="../../../../Binaries/Mac/UE4Editor.app/Contents/MacOS/UE4Editor"
+    UE4Editor="../../../Binaries/Mac/UE4Editor.app/Contents/MacOS/UE4Editor"
 else
-    UE4Editor="../../../../Binaries/Linux/UE4Editor"
+    UE4Editor="../../../Binaries/Linux/UE4Editor"
 fi
 
 echo "Initialising shader cache"

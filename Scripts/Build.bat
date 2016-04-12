@@ -12,6 +12,6 @@
 :: See the License for the specific language governing permissions and
 :: limitations under the License.
 
-call ..\..\..\..\..\Setup.bat
-call ..\..\..\..\..\GenerateProjectFiles.bat
-call ..\..\..\..\..\Engine\Build\BatchFiles\Build.bat UE4Editor Win64 Development
+call ..\..\..\..\Setup.bat
+call ..\..\..\..\GenerateProjectFiles.bat
+call ..\..\..\..\Engine\Build\BatchFiles\Build.bat UE4Editor Win64 Development
