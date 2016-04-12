@@ -17,15 +17,15 @@
 "Initialising shader cache"
 
 # Run once with just the block command followed by a quit - this initialises the cache
-../../../../Binaries/Win64/UE4Editor-Cmd.exe " -log -forcelogflush -stdout -AllowStdOutLogVerbosity -nosplash -nosound -unattended -execcmds=`"automation runtests MaliSC.BlockUntilAllShaderCompilationComplete`;quit`" "
+../../../../Binaries/Win64/UE4Editor-Cmd.exe " -log -forcelogflush -stdout -AllowStdOutLogVerbosity -nosplash -nosound -unattended -execcmds=`"automation runtests MaliOC.BlockUntilAllShaderCompilationComplete`;quit`" "
 
 "Running Tests"
 
 # Run the actual tests this time and track the output
-../../../../Binaries/Win64/UE4Editor-Cmd.exe " -log -forcelogflush -stdout -AllowStdOutLogVerbosity -nosplash -nosound -unattended -execcmds=`"automation runtests MaliSC.CompilationReport.MSM_Unlit`;quit`" " 2>&1 | Tee-Object -Variable UE4Log
+../../../../Binaries/Win64/UE4Editor-Cmd.exe " -log -forcelogflush -stdout -AllowStdOutLogVerbosity -nosplash -nosound -unattended -execcmds=`"automation runtests MaliOC.CompilationReport.MSM_Unlit`;quit`" " 2>&1 | Tee-Object -Variable UE4Log
 $UE4ExitCode = $LASTEXITCODE
 
-# We also have MaliSC.CompilationReport.MSM_DefaultLit tests which we don't run because they are very long running and they don't test anything that doesn't get tested with the MaliSC.CompilationReport.MSM_Unlit tests.
+# We also have MaliOC.CompilationReport.MSM_DefaultLit tests which we don't run because they are very long running and they don't test anything that doesn't get tested with the MaliOC.CompilationReport.MSM_Unlit tests.
 
 $Errors = @($UE4Log | Select-String -pattern "Automation Test Failed" -context 5,0)
 $NumErrors = @($Errors).Count

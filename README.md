@@ -28,12 +28,12 @@ https://www.unrealengine.com/ue4-on-github).
 Once you've got the engine checked out locally, navigate to the root folder, then, from your git shell, run:
 
 ```bash
-git submodule add -f <GIT_REPO_HERE>.git Engine/Plugins/Editor/MaliSC
+git submodule add -f https://github.com/ARM-software/malioc-ue4.git Engine/Plugins/Editor/MaliOC
 ```
 
 This will add the plugin as a [submodule](https://git-scm.com/book/en/v2/Git-Tools-Submodules) to Unreal Engine.
 
-You might need to go into **Engine/Plugins/Editor/MaliSC** and checkout a specific branch for the version of Unreal
+You might need to go into **Engine/Plugins/Editor/MaliOC** and checkout a specific branch for the version of Unreal
 Engine you are using.
 
 Finally, follow the instructions at [Building Unreal Engine 4 from Source](
@@ -49,16 +49,16 @@ builds of Unreal Engine 4 distributed through the Epic Launcher is as follows:
 
 * Using the Epic Launcher, download the version of Unreal Engine that you want to build the plugin for.
 * Launch this version of Unreal Engine. In the **Unreal Project Browser**, select the **New Project** tab, select the
-**C++** tab, and select the **Basic Code** template. Name the project **MaliSCProject**, and click **Create
+**C++** tab, and select the **Basic Code** template. Name the project **MaliOCProject**, and click **Create
 Project**. Make note of where the project was created.
 * The Unreal Editor and the IDE for your platform will automatically open after the initial compilation is complete.
 Close both.
-* Go into the **MaliSCProject** folder, where the project you just created is located.
-* Clone the **Offline Compiler** repository into **MaliSCProject/Plugins/Editor/MaliSC**.
-* Launch Unreal Engine again, select **MaliSCProject**, and click **Open**. A dialog will pop up asking you to rebuild
+* Go into the **MaliOCProject** folder, where the project you just created is located.
+* Clone the **Offline Compiler** repository into **MaliOCProject/Plugins/Editor/MaliOC**.
+* Launch Unreal Engine again, select **MaliOCProject**, and click **Open**. A dialog will pop up asking you to rebuild
 missing modules. Click **Yes**.
 * The Unreal Editor will automatically open after the modules have been rebuilt. Close it again.
-* Go into the **MaliSCProject/Plugins/Editor/MaliSC** folder, and delete the following files and folders:
+* Go into the **MaliOCProject/Plugins/Editor/MaliOC** folder, and delete the following files and folders:
   * .git
   * Intermediate
   * Scripts

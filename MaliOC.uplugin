@@ -1,0 +1,30 @@
+{
+    "FileVersion": 3,
+    "Version": 1,
+    "VersionName" : "1.0",
+    "FriendlyName": "Mali Offline Compiler",
+    "Description": "The Mali Offline Compiler plugin for Unreal Engine 4 compiles the shaders generated for your materials and gives you immediate feedback on the estimated performance of your materials on any ARM Mali(TM) GPU, without having to build, push, and run your application on an external device.",
+    "Category": "Editor",
+    "CreatedBy": "ARM",
+    "CreatedByURL": "http://malideveloper.arm.com/",
+    "DocsURL": "",
+    "MarketplaceURL": "",
+    "SupportURL": "",
+    "Modules": [
+        {
+            "Name": "MaliOC",
+            "Type": "Editor",
+            "LoadingPhase": "Default",
+            "WhitelistPlatforms" :
+            [
+                "Win64",
+                "Mac",
+                "Linux"
+            ]
+        }
+    ],
+    "EnabledByDefault": true,
+    "CanContainContent": false,
+    "IsBetaVersion": false,
+    "Installed": true
+}

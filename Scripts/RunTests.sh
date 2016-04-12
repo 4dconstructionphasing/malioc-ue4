@@ -25,7 +25,7 @@ fi
 echo "Initialising shader cache"
 
 # Run once with just the block command followed by a quit - this initialises the cache
-UE4ShaderCacheLog=$($UE4Editor -log -forcelogflush -stdout -AllowStdOutLogVerbosity -nosplash -nosound -unattended -execcmds="automation runtests MaliSC.BlockUntilAllShaderCompilationComplete;quit" | tee /dev/tty)
+UE4ShaderCacheLog=$($UE4Editor -log -forcelogflush -stdout -AllowStdOutLogVerbosity -nosplash -nosound -unattended -execcmds="automation runtests MaliOC.BlockUntilAllShaderCompilationComplete;quit" | tee /dev/tty)
 
 # Make the exit code of pipes be equal to the exit code of any application that returns a non-0 exit code, else 0
 set -o pipefail
@@ -33,11 +33,11 @@ set -o pipefail
 echo "Running Tests"
 
 # Run the actual tests this time and track the output
-UE4Log=$($UE4Editor -log -forcelogflush -stdout -AllowStdOutLogVerbosity -nosplash -nosound -unattended -execcmds="automation runtests MaliSC.CompilationReport.MSM_Unlit;quit" | tee /dev/tty)
+UE4Log=$($UE4Editor -log -forcelogflush -stdout -AllowStdOutLogVerbosity -nosplash -nosound -unattended -execcmds="automation runtests MaliOC.CompilationReport.MSM_Unlit;quit" | tee /dev/tty)
 
 UE4ExitCode=$?
 
-# We also have MaliSC.CompilationReport.MSM_DefaultLit tests which we don't run because they are very long running and they don't test anything that doesn't get tested with the MaliSC.CompilationReport.MSM_Unlit tests.
+# We also have MaliOC.CompilationReport.MSM_DefaultLit tests which we don't run because they are very long running and they don't test anything that doesn't get tested with the MaliOC.CompilationReport.MSM_Unlit tests.
 
 FailureString="Automation Test Failed"
 SuccessString="AutomationTestingLog: Info ...Automation Test Succeeded"
