@@ -20,3 +20,6 @@
 #include "MaterialEditorModule.h"
 
 DECLARE_LOG_CATEGORY_EXTERN(MaliOfflineCompiler, Log, All)
+
+/** @return the full path to the Mali Offline Compiler Plugin folder (i.e. where all the resources are located) */
+const FString& GetMaliOCPluginFolderPath();

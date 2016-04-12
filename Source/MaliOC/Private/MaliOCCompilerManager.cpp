@@ -34,9 +34,7 @@ static const FString OFFLINE_COMPILER_DOWNLOAD_NAME = TEXT("Mali_Offline_Compile
 
 static const FString OFFLINE_COMPILER_DOWNLOAD_URL = FPaths::Combine(*MOC_FTP_URL, *OFFLINE_COMPILER_DOWNLOAD_NAME);
 
-static const FString MaliOC_FOLDER_PATH = FPaths::ConvertRelativePathToFull(FPaths::Combine(*FPaths::EnginePluginsDir(), TEXT("Editor/"), TEXT("MaliOC/")));
-
-static const FString FULL_COMPILER_PATH = FPaths::Combine(*MaliOC_FOLDER_PATH, *OFFLINE_COMPILER_FOLDER_TO_EXTRACT);
+static const FString FULL_COMPILER_PATH = FPaths::Combine(*GetMaliOCPluginFolderPath(), *OFFLINE_COMPILER_FOLDER_TO_EXTRACT);
 
 static const FString FULL_DLL_PATH = FPaths::Combine(*FULL_COMPILER_PATH, *DLL_NAME);
 
@@ -47,11 +45,6 @@ malicm_version FCompilerManager::GetExpectedCompilerManagerVersion()
     version.minor = 0u;
     version.patch = 1u;
     return version;
-}
-
-const FString& FCompilerManager::GetMaliOCFolderPath()
-{
-    return MaliOC_FOLDER_PATH;
 }
 
 const FString& FCompilerManager::GetFullCompilerPath()

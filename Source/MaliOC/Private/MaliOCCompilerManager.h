@@ -44,9 +44,6 @@ public:
     /** @return true if the compiler manager DLL can be found on disk */
     static bool CompilerManagerDLLExists();
 
-    /** @return the path to the MaliOC folder (assuming it has been installed in the correct place) */
-    static const FString& GetMaliOCFolderPath();
-
     /** @return the path to the OfflineCompiler folder inside the MaliOC folder */
     static const FString& GetFullCompilerPath();
 

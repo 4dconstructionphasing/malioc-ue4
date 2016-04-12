@@ -550,7 +550,7 @@ private:
     {
         const auto OpenMaliOCFolder = [&]() -> void
         {
-            FPlatformProcess::ExploreFolder(*FCompilerManager::GetMaliOCFolderPath());
+            FPlatformProcess::ExploreFolder(*GetMaliOCPluginFolderPath());
         };
 
         const auto LaunchDownloadURL = [&]() -> void
@@ -641,7 +641,7 @@ private:
                             .AutoWidth()
                             [
                                 SNew(SHyperlink)
-                                .Text(FText::FromString(FCompilerManager::GetMaliOCFolderPath()))
+                                .Text(FText::FromString(GetMaliOCPluginFolderPath()))
                                 .ToolTipText((LOCTEXT("TabGenWrapperOpenFolderTooltip", "Open this folder using the system file explorer")))
                                 .OnNavigate_Lambda(OpenMaliOCFolder)
                             ]

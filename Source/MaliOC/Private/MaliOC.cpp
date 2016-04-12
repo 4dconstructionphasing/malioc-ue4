@@ -26,6 +26,12 @@ DEFINE_LOG_CATEGORY(MaliOfflineCompiler)
 
 static const FName MaliOCTabID(TEXT("MaliOCTab"));
 
+const FString& GetMaliOCPluginFolderPath()
+{
+    static const FString path = FPaths::ConvertRelativePathToFull(FPaths::Combine(*FPaths::EnginePluginsDir(), TEXT("Editor/"), TEXT("MaliOC/")));
+    return path;
+}
+
 /** Singleton that registers the Mali Offline Compiler button with Slate */
 class FMaliOCCommands final : public TCommands < FMaliOCCommands >
 {

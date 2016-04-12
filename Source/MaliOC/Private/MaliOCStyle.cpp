@@ -21,7 +21,7 @@
 
 FString FMaliOCStyle::InContent(const FString& RelativePath, const ANSICHAR* Extension)
 {
-    static FString ContentDir = FPaths::EnginePluginsDir() / TEXT("Editor/MaliOC/Content");
+    static const FString ContentDir = FPaths::Combine(*GetMaliOCPluginFolderPath(), TEXT("Content"));
     return (ContentDir / RelativePath) + Extension;
 }
 
